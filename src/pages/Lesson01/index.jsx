@@ -4,7 +4,10 @@ import Chart from "../../components/Chart01";
 import instruction from "./instruction.md?raw";
 
 const convertData = (input) => {
-  return []; // ここを作りましょう！
+  return input.map(x => ({
+    name: x[0],
+    count: x[1]
+  }));
 };
 
 const Lesson = () => {
