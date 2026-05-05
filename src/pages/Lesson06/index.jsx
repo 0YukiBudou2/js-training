@@ -4,7 +4,21 @@ import Chart from "../../components/Chart06";
 import instruction from "./instruction.md?raw";
 
 const convertData = (input) => {
-  return []; // ここを作りましょう！
+  return input.map(item =>{
+    let color;
+    if(item.gender === "男性"){
+      color = "blue";
+    }else{
+      color = "red"
+    }
+    return{
+      color: color,
+      gender: item.gender,
+      bmi: item.x/Math.pow(item.y/100,2),
+      weight: item.x,
+      height: item.y
+    }
+  }) 
 };
 
 const Lesson = () => {
