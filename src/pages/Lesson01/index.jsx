@@ -4,9 +4,9 @@ import Chart from "../../components/Chart01";
 import instruction from "./instruction.md?raw";
 
 const convertData = (input) => {
-  return input.map(x => ({
-    name: x[0],
-    count: x[1]
+  return input.map(item => ({
+    name: item[0],
+    count: item[1]
   }));
 };
 
